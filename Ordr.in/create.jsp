@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Create a pop-up bakeshop</title>
-		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	</head>
-	<body>
-		<!-- navbar -->
-		<h1>Create a pop-up bakeshop</h1>
-		<form name="create_popup" method="POST">
-			<p>Name of the pop-up: <input type="text" name="name" placeholder=""></p>
-			<p>Staff: </p>
-			<ul>
-				<li><input type="email" name="staff" class="staff"></li><button id="add_staff">%2B</button>
-			</ul>
-			<p>Location: <input type="text" name="location"></p>
-			<p>Image: <input type="image" name="image"></p>
-			<p>Pop-up theme: <input type="text" name="theme"></p>
-			<p>Description: <input type="text" name="description"></p>
-			<input type="submit" value="Create!">
-		</form>
-	</body>
+        <head>
+                <title>Create a pop-up bakeshop</title>
+                <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+                <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+                <script src="create.js"></script>
+                <style>
+                        li { list-style-type: none; margin-left: -40px; }
+                        button { margin-left: 3px; font-size: 16px; }
+                </style>
+        </head>
+        <body>
+                <div class="container jumbotron">
+                        <h1>Create a pop-up bakeshop</h1>
+                        <form action="createNOW.jsp" name="create_popup" method="POST">
+                                <p>Name of the pop-up: <input type="text" name="name" placeholder=""></p>
+                                <p>Zip Code: <input type="text" name="zipcode"></p>
+                                <p>Address: <input type="text" name="address"></p>
+                                <p>Description: <input type="text" name="description"></p>
+                                <p>Menu: <input type="text" name="menu"></p>
+                                <p>Username: <input type="text" name="username"></p>
+                                <p>Password: <input type="text" name="password"></p>
+                                <input type="submit" value="Create!">
+                        </form>
+                </div>
+        </body>
 </html>

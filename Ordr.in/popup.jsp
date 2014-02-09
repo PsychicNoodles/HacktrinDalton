@@ -12,7 +12,17 @@
 		<title><%=info.getName()%></title>
 		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
 	</head>
+
 	<body>
 		<div id="popup">
 			<%=if(info.hasImage()) {"<div><img src=\"" + info.getImage() + "\"></div>"}%>
@@ -22,10 +32,10 @@
 			<ol id="food">
 				<%
 				for(String rest : info.getRestaurants()) {
-					out.println("\t\t\t\t<li>" + rest + "<ol>")
+					out.println("<li>" + rest + "<ol>")
 					for(String food : info.getFoodItem(rest))
-						out.println("\t\t\t\t\t<li>" + food + "</li>");
-					out.println("\t\t\t\t</li>");
+						out.println("<li>" + food + "</li>");
+					out.println("</li>");
 				}
 				%>
 			</ol>
